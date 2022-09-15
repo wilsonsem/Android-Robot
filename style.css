@@ -1,0 +1,226 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* frame and forming */
+/* body{
+    margin: 0;
+    padding: 0;
+} */
+.robot-1, .robot-2{
+    width:40%;
+    height:700px;
+    position: relative;
+}
+.head, .center-piece, .leg{
+    display:flex;
+    flex-direction:row;
+    flex-grow: wrap;
+}
+.h1, .h2, .h3{
+    margin-top: 20px;
+    height: 200px;
+}
+.hh1, .mid-body, .hh2{
+    height: 210px;
+}
+.l1, .l2, .l3{
+    height: 120px;   
+}
+.h1, .hh1, .l1{
+    width: 24%;    
+}
+.h2, .mid-body, .l2{
+    width: 44%;
+}
+.h3, .hh2, .l3{
+    width:24%;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/* bodgy frame end */
+
+/* robot image */
+    /* antena */
+.atn-wrap{
+    display:flex;
+    flex-direction: row;
+    /* width: 40%; */
+    justify-content: space-between;
+    margin: auto;
+    position: relative;
+}
+.atn-1{
+    position: absolute;
+    height: 70px;
+    width: 15px;
+    background-color:#32bb10;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    -webkit-transform: rotate(-40deg);
+    -moz-transform: rotate(-25deg);
+    margin-left:50px;
+    margin-top: 45px;
+
+}
+.atn-2 {
+    position: absolute;
+    height: 70px;
+    width: 15px;
+    background-color:#32bb10;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    -webkit-transform: rotate(40deg);
+    -moz-transform: rotate(25deg);
+    /* left: 25; */
+    margin-left:180px;
+    margin-top: 47px;
+    /* -ms-transform: rtate(45deg); */
+    /* transform: rotate(45deg); */
+}
+    /* antena end */
+    /* head semicircle */
+.real-head{
+    height: 100px;
+    width: 220px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    background-color:#32bb10;
+    margin: auto;
+    margin-top: 97px;
+}
+    /* head semicircle end */
+    /* eyes */
+.head-wrap{
+    width: 45%;
+    margin:auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.c-1, .c-2{
+    margin-top: 35px;
+    height:20px;
+    width: 20px;
+    background-color:#ffffff;
+    border-radius: 50%; 
+}
+    /* eyes end */
+    /* centerpiece-body start */
+.center-body{
+    height: 209px;
+    width: 220px;
+    margin: auto;
+    margin-top: 3px;
+    background-color: #32bb10;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%; 
+    position: static;  
+}
+    /* centerpiece-body start end */
+    /* hands start */
+.wing-1{
+    margin-left: 90px;
+}
+.wing-1, .wing-2{
+    width: 40px;
+    height: 150px;
+    background-color: #32bb10;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+    /* hand end */
+    /* legs start */
+
+/* .l2{
+    background-color: yellow;
+} */
+.l2-wrap{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    margin: auto;
+    width: 60%;
+    position: relative;
+}
+.l-1, .l-2{
+    width: 45px;
+    height: 140px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #32bb10;
+    margin-top: -20px;
+}
+.l-2{
+    animation-name: kick;
+    animation-duration: 0.5s;
+    animation-play-state:running;
+}
+
+.balling{
+    height:50px;
+    width: 50px;
+    position: absolute;
+    border: 1px solid red;
+    background-color:#32bb10;
+    border-radius: 50%; 
+    margin-top: -10px;
+    margin-left: -30px;
+    animation-name: roll;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-play-state: paused; 
+}
+.robot-1:hover .l-2{
+    animation-play-state: running;
+} 
+.robot-1:hover .balling{
+    animation-play-state: running;
+}
+
+@keyframes roll{
+    from{
+        transform: translateY(80px) rotate(0deg);
+        margin-left:-30px;
+    }
+    to {
+        transform: translate(80px, 80px) rotate(359deg);
+        margin-left:350px;
+    }    
+}
+
+@keyframes kick{
+    from{
+        transform: rotate(0deg) ;
+    }
+    to{
+        transform: rotate(-30deg);
+    }
+}
+.robot-2:hover .l-1{
+    transform: rotate(30deg); 
+}
+
+@keyframes reverse{
+    from {
+        transform: translate(80px, 80px) rotate(0deg);
+        margin-left:350px;
+    }
+    to{
+        transform: translateY(80px) rotate(359deg);
+        margin-left:-30px;
+    }    
+}
+
+
+  
